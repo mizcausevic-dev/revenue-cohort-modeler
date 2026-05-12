@@ -1,19 +1,20 @@
-﻿# Why We Built This
+# Why We Built This
 
-**revenue-cohort-modeler** started from a recurring operating problem in SaaS revenue operations. Teams were collecting more data and more system state, but the decision layer around that data was still fragile under pressure. Teams could collect raw signals, but still struggle to answer the harder questions under pressure: what is actually drifting, who owns the next move, and how much business or control risk is building underneath the technical state.
+**revenue-cohort-modeler** exists because too many teams were solving adjacent problems without solving the operating problem at the center. The tools were there; the coherence was not.
 
-In this case the pressure showed up around billing ambiguity, attribution lag, usage-metering gaps, and forecast drift. That sounds specific, but the underlying failure mode was familiar. A team would have multiple tools in place, each doing a piece of the job. There might be observability, validation, ticketing, dashboards, static analysis, workflow software, or spreadsheet-based reporting. None of that meant the operating problem was actually solved. What was usually missing was a clear translation layer between system behavior and accountable action.
+The recurring pressure in this space showed up around weak semantic packaging, inconsistent structured data, and poor answer-system discoverability. In practice, that meant teams could collect logs, metrics, workflow state, documents, or events and still not have a good answer to the hardest questions: what is drifting, what matters first, who owns the next move, and what evidence supports that move? Once a system reaches that point, the problem is no longer only technical. It becomes operational.
 
-That was the opening for **revenue-cohort-modeler**. The repo was designed around a simple idea: operators need more than visibility. They need evidence, priorities, and next actions that make sense under pressure. That is why the project is framed as SaaS revenue operations rather than as a generic app demo. The point is not just to show that data can be rendered or APIs can be wired together. The point is to show what a practical control surface looks like when the audience is RevOps, product-ops, and growth systems teams.
+That is why **revenue-cohort-modeler** was built the way it was. The repo is a deliberate attempt to model a real operating layer for growth, search, content, and analytics teams. It is not just trying to present data attractively or prove that a stack can be wired together. It is trying to show what happens when evidence, prioritization, and next-best action are treated as first-class product concerns.
 
-The surrounding toolchain was never useless. CRM reporting, billing tools, product analytics, and spreadsheet forecasting handled adjacent parts of the job reasonably well. The problem was that they still left out a coherent operating layer from acquisition through monetization, usage, and retention. That left operators stitching together evidence by hand right when the environment was least forgiving.
+The surrounding tooling was not useless. SEO crawlers, analytics platforms, and schema validators each handled a slice of the work. But they still left out a review layer that connected technical content hygiene with answer readiness and citation potential. That gap kept turning ordinary review work into detective work.
 
-That shaped the design philosophy from the start:
+That shaped the design philosophy:
 
-- **operator-first** so the most important signal is the one that gets surfaced first
-- **decision-legible** so a security lead, platform operator, product owner, or business stakeholder can understand why a recommendation exists
-- **CI-native** so the checks and narratives can live close to where systems are built, changed, and reviewed
+- **operator-first** so the riskiest or most time-sensitive signal is surfaced early
+- **decision-legible** so the logic behind a recommendation can be understood by humans under pressure
+- **review-friendly** so the repo supports discussion, governance, and iteration instead of hiding the reasoning
+- **CI-native** so checks and narratives can live close to the build and change process
 
-That philosophy also explains what this repo does not try to be. It is not a vague "AI platform," not a one-off research prototype, and not a thin wrapper around a fashionable stack. It is a targeted attempt to model a real operating layer around this problem: R + Plumber statistical modeling API for SaaS cohort retention curves, churn-adjusted LTV distributions, NRR decomposition, and Prophet-based ARR forecasting. Kaplan-Meier survival analysis, BG/NBD LTV models, and ggplot2 chart outputs. Connects to PostgreSQL revenue schema.
+This repo also avoids trying to be a vague platform for everything. Its value comes from being opinionated about a real problem: R + Plumber statistical modeling API for SaaS cohort retention curves, churn-adjusted LTV distributions, NRR decomposition, and Prophet-based ARR forecasting. Kaplan-Meier survival analysis, BG/NBD LTV models, and ggplot2 chart outputs. Connects to PostgreSQL revenue schema.
 
-What comes next is practical. The roadmap is about pushing the project deeper into real operational utility: deeper metric contracts, better event evidence, and stronger ties between usage, billing, and decision support. That direction matters because the long-term value of **revenue-cohort-modeler** is not the individual screen or endpoint. It is the operating discipline behind it. The point of the repo is to make that operating layer visible enough to review, improve, and trust.
+What comes next is practical. The roadmap is about deeper citation-gap detection, scheduled probes, and stronger semantic publishing workflows. Its real value is not the stack or the screen. It is the operating model it makes visible.
